@@ -21,6 +21,12 @@ module lif (
 
     // next_state logic and spiking logic
     assign spike = (state >= threshold);
+    // assign next_state = current + (spike ? 0 : state >> 1)
+    // if there is a spike, next state is current + 0; if no spike, next state is current + half of state
+
     assign next_state = (spike ? 8'b0 : current) + (spike ? 0 : (state >> 1)+(state >> 2)+(state >> 3));
+    // first term: if there is a spike, dont add current. if no spike, add current
+    // second term: if yes spike, add zero; if no spike, add 0.875 times state
+    // combine the two terms: if yes spike, HARD RESET (both terms eval to zero)
 
 endmodule
