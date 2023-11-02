@@ -13,6 +13,7 @@ async def test_my_design(dut):
     clock = Clock(dut.clk, 1, units="ns")
     cocotb.start_soon(clock.start())
 
+    # reset ckt to a pre-defined state before doing anything
     dut.rst_n.value = 0 # low to reset
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1 # take out of reset
