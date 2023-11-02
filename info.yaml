@@ -21,7 +21,7 @@ yaml_version: 4
 #
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
-  author:       "Mariana Huerta"      # Your name
+  author:       "Mariana_Huerta"      # Your name
   title:        "Leaky Integrate-and-Fire Neuron"      # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
   description:  "Implement a LIF neuron in silicon."      # Short description of what your project does
