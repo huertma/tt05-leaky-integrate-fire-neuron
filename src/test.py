@@ -5,7 +5,7 @@ from cocotb.triggers import RisingEdge, FallingEdge, Timer, ClockCycles
 @cocotb.test()
 async def test_my_design(dut):
 
-    CONSTANT_CURRENT = 85 # For example, injecting some current
+    CONSTANT_CURRENT = 75 # For example, injecting some current
     
     dut._log.info("start simulation")
 
