@@ -1,6 +1,6 @@
 `default_nettype none
 
-module lif ( 
+module lif_n ( 
     input wire [7:0] current,
     input wire       clk,
     input wire       rst_n, // active low, RESET happens when rst_n is 0
